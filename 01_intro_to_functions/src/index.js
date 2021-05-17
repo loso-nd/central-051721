@@ -1,8 +1,8 @@
 //Data types
 let cat = 'rose' //String
 let num = 0 //Number
-let bool = true; //Boolean 
-let und; // Undefined
+let bool = true //Boolean 
+let und // Undefined
 //null 
 
 const intro1 = 'Welcome to the Flatiron Podcast'
@@ -10,10 +10,10 @@ const intro2 = 'Thanks for tuning to the Flatiron Podcast'
 
 // mini program 
 const introduction = function() {
-   console.log('before return ');
-   return `Thanks for tuning to the Flatiron Podcast`;
+   console.log('before return ')
+   return `Thanks for tuning to the Flatiron Podcast`
    //Will not log
-   console.log('after return');
+   console.log('after return')
 }
 // introduction reference 
 // introduction() invocation
