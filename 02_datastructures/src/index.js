@@ -1,5 +1,5 @@
 // Array
-let cakeNames = ['Chocolate Porter', 'Earl Grey', 'Salted Carmel', 'Vanilla', 'Carrot', 'Lemon Cream', 'Rose', 'Pink Champagne', 'Raspberry Cardamon Rose']
+// let cakeNames = ['Chocolate Porter', 'Earl Grey', 'Salted Carmel', 'Vanilla', 'Carrot', 'Lemon Cream', 'Rose', 'Pink Champagne', 'Raspberry Cardamon Rose']
 //Plain Old JavaScript Object
 let cakeOrder1 = {
     id: 1,
@@ -44,3 +44,70 @@ const orders = [
         ingredients: ["earl grey", "buttermilk", " vanilla extract", "eggs", "sugar", "butter", "baking soda", "baking powder", "flour"]
     }
 ]
+//Read values from Objects 
+cakeOrder1.flavor
+cakeOrder1["flavor"]
+Object.keys(cakeOrder1)
+Object.values(cakeOrder1)
+Object.entries(cakeOrder1)
+
+//Update items in objects
+cakeOrder1.price = 20.00
+cakeOrder1["price"] = 30.00
+
+//let cakeOrder2 = cakeOrder1
+//Pass by reference 
+let cakeOrder2 = {...cakeOrder1, complete:true, price:15}
+
+// Create a new property 
+// cakeOrder1["complete"] = false 
+// cakeOrder1.complete = true
+
+//loop through and log an object
+function loopThrough(cakes){
+    for(key in cakes){
+        console.log(key)
+        console.log(cakes[key])
+
+    }
+}
+let cakeNames = ['Chocolate Porter', 'Earl Grey', 'Salted Carmel', 'Vanilla', 'Carrot', 'Lemon Cream', 'Rose', 'Pink Champagne', 'Raspberry Cardamon Rose']
+
+//Read Arrays
+cakeNames[0]
+//cakeNames[8]
+cakeNames[cakeNames.length-1]
+
+//change the original
+cakeNames.push('salted carmel')
+// make a copy
+let cakeName2 = [...cakeNames, 'salted carmel2']
+
+//make a copy of an item from an array
+let slice = cakeNames.slice(3,4)
+
+//remove an item from an array
+let splice = cakeNames.splice(3,1)
+
+const logCakeFlavor = cake => console.log(cake.flavor)
+const upCaseCake = cake => console.log(cake.flavor.toUpperCase())
+const logPrice = cake => console.log(cake.price)
+//const cakeLogger = cake => console.log(cake)
+
+function forEveryCake(cakeArray, cakeAction){
+    for(let cake of cakeArray){
+        //console.log(cake)
+        cakeAction(cake)
+    }
+}
+forEveryCake(orders, logCakeFlavor)
+//for every value in our array
+//forEach will call this callback
+//orders.forEach(logCakeFlavor)
+//orders.forEach(cakeLogger)
+orders.forEach(cake => console.log(cake))
+orders.forEach(function(cake) {
+    console.log(cake.size)
+})
+
+//[x,x,x]
