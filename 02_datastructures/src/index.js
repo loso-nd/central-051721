@@ -110,4 +110,11 @@ orders.forEach(function(cake) {
     console.log(cake.size)
 })
 
-//[x,x,x]
+//for of
+// can't be used on objects
+// will give us the value of the index 
+//[1,2,3]
+//for in
+//can be used on objects
+//and will return the key
+//when used on an array it gives us the index
