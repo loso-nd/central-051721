@@ -127,9 +127,11 @@ function myFilter(myArray, myFunction){
 // console.log(myFilter(orders,pricey))
 // console.log(orders.filter(pricey))
 // console.log(orders.filter(cake => cake.amount > 1))
-
+//chaining and nesting 
 console.log(orders.filter(item => item.ingredients.find(innerItem => innerItem === "earl grey")))
+console.log(orders.map(item => item.ingredients).flat().forEach(item => console.log(item)))
 
+//advanced params
 function logAllIngredients(array){
     let allIngredientsArrays = array.map(item => item.ingredients)
     return allIngredientsArrays.flat().filter((value, indx, array) => {
