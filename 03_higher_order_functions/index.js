@@ -32,23 +32,15 @@ const orders = [
         ingredients: ["earl grey", "buttermilk", " vanilla extract", "eggs", "sugar", "butter", "baking soda", "baking powder", "flour"]
     }
 ]
-// Review return values
-function cakeFlavor(cake){
-    return cake.flavor
-}
-function cakePrice(cake){
-    return cake.price
-}
-//console.log(cakeFlavor(orders[0]))
+// review return values **************************************
+const cakeFlavor = cake => cake.flavor
+const cakePrice = cake =>  cake.price
+const cakeAction = (func,num) =>  func(orders[num])
+console.log(cakeFlavor(orders[0]))
+console.log(cakeAction(cakeFlavor,2))
+console.log(cakeAction(cakePrice,1))
 
-function cakeAction(func,num){
-    return func(orders[num]);
-    
-}
-// console.log(cakeAction(cakeFlavor,2))
-// console.log(cakeAction(cakePrice,1))
-
-// forEach
+// forEach ****************************************************
 // Should loop through every item in an array and perform some action on every item in the array
 // return undefined
 
@@ -59,24 +51,23 @@ function myForEach(array, action){
         action(elem)
     }
 }
-//myForEach(orders, consoleElem)
+// Our forEach
+myForEach(orders, consoleElem)
+// Built in forEach
+orders.forEach(consoleElem)
+orders.forEach(element => {
+    console.log(`price: $ ${element.price}  size: ${element.size}`)
+    console.log(element.flavor)
+})
 
-// orders.forEach(consoleElem)
-// orders.forEach(element => {
-//     console.log(`price: $ ${element.price}  size: ${element.size}`)
-//     console.log(element.flavor)
-// })
-
-// map
+// map ********************************************************
 // Should loop through every item in an array
 // it should take a transform function
 // transform every item in the array
 // should return a new array with all of the transformed items
-
 function getFlavors(order){
     return order.flavor
 }
-
 
 function myMap(array, transformAction){
     let newArray = []
@@ -86,12 +77,14 @@ function myMap(array, transformAction){
     return newArray
 }
 
+//Our mao
 console.log(myMap(orders, getFlavors))
-// console.log(orders.map(getFlavors))
-// console.log(orders.map(item => {
-//     item.price = item.price/2
-//     return item
-// }))
+//Built in map
+console.log(orders.map(getFlavors))
+console.log(orders.map(item => {
+    item.price = item.price/2
+    return item
+}))
 
 
 // find
@@ -99,7 +92,7 @@ console.log(myMap(orders, getFlavors))
 // perform a test on every item in the array
 // should return the FIRST item that returns true in the test
 
-const findCupCakes = (item) => item.size === 'cup cake'
+const findCupCakes = item => item.size === 'cup cake'
 
 function myFind(ordersArray, test){
     for(item of ordersArray){
@@ -108,9 +101,11 @@ function myFind(ordersArray, test){
         }
     }
 }
-//console.log(myFind(orders,findCupCakes))
-// console.log(orders.find(item => item.price > 40))
-// console.log(orders.find(item => item.flavor === 'fish'))
+// Our find
+console.log(myFind(orders,findCupCakes))
+// Build in find
+console.log(orders.find(item => item.price > 40))
+console.log(orders.find(item => item.flavor === 'fish'))
 
 //filter
 //Should loop through every item in the array
@@ -129,11 +124,13 @@ function myFilter(array, test){
     return newArray
 }
 
-//console.log(myFilter(orders,findAmount))
-// console.log(orders.filter(findAmount))
-// console.log(orders.filter(item => item.price === 40))
-// console.log(orders.filter(item => item.price < 40))
-// console.log(orders.filter(item => item.price > 40))
+// Our filter
+console.log(myFilter(orders,findAmount))
+// Built in filter
+console.log(orders.filter(findAmount))
+console.log(orders.filter(item => item.price === 40))
+console.log(orders.filter(item => item.price < 40))
+console.log(orders.filter(item => item.price > 40))
 
 // reduce
 // should loop through every item in an array
@@ -159,7 +156,9 @@ function myReduce(array, reduceAction, starterVal){
     }
     return accumulator
 }
-//console.log(myReduce(orders, cakeReducer, 1))
-// console.log(orders.reduce(cakeReducer, 1))
-// console.log(orders.reduce(allFlavorsOrdered, ''))
-//console.log(orders.reduce(allSizesOrdered, '!'))
+// Our reduce
+console.log(myReduce(orders, cakeReducer, 1))
+//Built in reduce
+console.log(orders.reduce(cakeReducer, 1))
+console.log(orders.reduce(allFlavorsOrdered, ''))
+console.log(orders.reduce(allSizesOrdered, '!'))
