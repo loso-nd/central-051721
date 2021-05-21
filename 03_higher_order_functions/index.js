@@ -162,3 +162,6 @@ console.log(myReduce(orders, cakeReducer, 1))
 console.log(orders.reduce(cakeReducer, 1))
 console.log(orders.reduce(allFlavorsOrdered, ''))
 console.log(orders.reduce(allSizesOrdered, '!'))
+
+
+orders.filter(item => item.ingredients.find(item => item === "eggs"))
