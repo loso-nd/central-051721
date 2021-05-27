@@ -1,0 +1,46 @@
+{
+  "animals": [
+    {
+      "id": 1,
+      "name": "Pangolin",
+      "imageUrl": "https://i.pinimg.com/originals/bf/ff/93/bfff9395c6ae0d24534f030580924c7e.jpg",
+      "description": "The Pangolin, otherwise known as the scaly anteater, is the only mammal in the world to be covered from head to toe in keratin scales (the same as human finger nails).",
+      "donations": 70,
+      "funFacts": [
+        {
+          "keeper_id": 1,
+          "fact": "Pangolin  means 'roller'"
+        },
+        {
+          "keeper_id": 3,
+          "fact": "There are Eight Species of Pangolin"
+        }
+      ]
+    },
+    {
+      "name": "Sloth",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Choloepus_hoffmanni_%28Puerto_Viejo%2C_CR%29_crop.jpg/220px-Choloepus_hoffmanni_%28Puerto_Viejo%2C_CR%29_crop.jpg",
+      "description": "Is really cute!!!",
+      "donations": 0,
+      "id": 5,
+      "funFacts": [
+        {
+          "keeper_id": 44,
+          "fact": "Without sloths there would be no avocados"
+        },
+        {
+          "keeper_id": 7,
+          "fact": "Sloths are 3 times stronger than us"
+        },
+        {
+          "keeper_id": 59,
+          "fact": "They poop a third of their body weight in one go"
+        },
+        {
+          "keeper_id": 59,
+          "fact": "Sloths are blind in bright daylight"
+        }
+      ]
+    }
+  ]
+}
