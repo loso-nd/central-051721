@@ -1,6 +1,6 @@
 document.querySelector('form').addEventListener('submit', youtubeSearch)
 
-const API_KEY = 'AIzaSyDRYid3DuC-wBwEtvZmHkM7BgPirPnfmis'
+const API_KEY = ''
 
 function youtubeSearch(e){
     e.preventDefault()
