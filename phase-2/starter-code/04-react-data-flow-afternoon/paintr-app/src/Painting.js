@@ -5,7 +5,7 @@ function Painting(props) {
   // Initialize "votes" state
   const [votes, votesSetter] = useState(props.painting.votes);
 
-  // Breakout Activity #1: Create Function to Add Votes (addVotes)
+  // Breakout Activity #2: Create Function to Add Votes (addVotes)
   // ...
   return (
     <div>
@@ -20,7 +20,7 @@ function Painting(props) {
 
       <div class="ui labeled button" tabindex="0">
 
-      {/* Breakout Activity #1: Call addVotes() via onClick */}
+      {/* Breakout Activity #2: Call addVotes() via onClick */}
         <div class="ui red button">
           <i class="heart icon"></i> Add Vote
         </div>

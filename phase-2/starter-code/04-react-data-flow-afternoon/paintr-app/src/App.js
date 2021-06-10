@@ -19,10 +19,10 @@ function App() {
   const [paintings, paintingsSetter] = useState(paintingsData);
   const [formView, formViewSetter] = useState(false);
 
-  // Create function to toggle form (toggleForm)
+  // Create function to change Parent's "color" state (changeColor)
   // ...
 
-  // Create function to change Parent's "color" state (changeColor)
+  // Breakout Activity #1: Create Function to Toggle Between PaintingForm / PaintingsList (toggleForm)
   // ...
 
   return (
@@ -41,7 +41,7 @@ function App() {
       <button>Show/Hide New Painting Form</button>
       <hr />
 
-      {/* Render PaintingForm or PaintingsList Components based upon toggleForm */}
+      {/* Breakout Activity #1: Render PaintingForm or PaintingsList Components based upon toggleForm */}
       {/* ... */}
     
       <PaintingsList paintings={paintings} />
