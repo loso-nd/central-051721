@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [text, setText] = useState(localStorage.getItem("text") || "");
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(localStorage.getItem("count") || 0);
 
   useEffect(() => {
     localStorage.setItem("text", text);
-  }, [text]);
+    localStorage.setItem("count", count);
+  }, [text, count]);
 
   return (
     <div>
