@@ -1,5 +1,5 @@
 // ✅ on line 2, import the useEffect hook along with the useState hook
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [pics, setPics] = useState([]);
@@ -9,6 +9,7 @@ function App() {
   // ✅ take all the code out from the handleFetchClick function, and put it inside the callback function in your useEffect
   // 📃 Check out the docs for an example: https://reactjs.org/docs/faq-ajax.html#example-using-ajax-results-to-set-local-state
 
+  //useEffect(())
   // 🗑 once your useEffect hook works, delete this function and also delete the <button> from the JSX
   function handleFetchClick() {
     console.log("Fetching data...");
@@ -53,6 +54,6 @@ function DogPics({ pics }) {
       ))}
     </div>
   );
-}
+} 
 
 export default App;

@@ -67,8 +67,8 @@ function App() {
       />
 
       {/* Add toggleForm click behavior */}
-      <button onClick={toggleForm}>Show/Hide New Painting Form</button>
-      <button onClick={sortPaintings}>Sort Paintings</button>
+      {/* <button onClick={toggleForm}>Show/Hide New Painting Form</button>
+      <button onClick={sortPaintings}>Sort Paintings</button> */}
       <hr />
 
       {/* Breakout Activity #1: Render PaintingForm or PaintingsList Components based upon the new formView state value */}

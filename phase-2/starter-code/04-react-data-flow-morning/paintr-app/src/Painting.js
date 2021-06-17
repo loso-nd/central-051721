@@ -6,7 +6,11 @@ function Painting(props) {
   const [votes, votesSetter] = useState(props.painting.votes);
 
   // Breakout Activity #2: Create Function to Add Votes (addVotes)
-  // ...
+  function addVotes(){
+    props.setFilteredList();
+    votesSetter(votes + 1);
+    console.log("You voted for me")
+  }
   return (
     <div>
       <img src={props.painting.image} />
@@ -21,7 +25,7 @@ function Painting(props) {
       <div class="ui labeled button" tabindex="0">
 
       {/* Breakout Activity #2: Call addVotes() via onClick */}
-        <div class="ui red button">
+        <div class="ui red button" onClick={addVotes}>
           <i class="heart icon"></i> Add Vote
         </div>
         <a class="ui basic red left pointing label">

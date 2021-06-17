@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, {useState } from 'react';
 
 function Painting(props) {
 
@@ -12,7 +12,7 @@ function Painting(props) {
 
   return (
     <div>
-        <img src={props.painting.image} />
+        <img src={props.painting.image} alt={props.painting.title}/>
         <h4>
           "{props.painting.title}" by {props.painting.artist.name}
         </h4>a
@@ -21,13 +21,13 @@ function Painting(props) {
           Dimensions: {props.painting.dimensions.width} in. x {props.painting.dimensions.height} in.
         </p>
 
-        <div class="ui labeled button" tabindex="0">
+        <div className="ui labeled button" tabIndex="0">
 
         {/* Breakout Activity #2: Call addVotes() via onClick */}
-        <div onClick={addVotes} class="ui red button">
-          <i class="heart icon"></i> Add Vote
+        <div onClick={addVotes} className="ui red button">
+          <i className="heart icon"></i> Add Vote
         </div>
-        <a class="ui basic red left pointing label">
+        <a className="ui basic red left pointing label" href="./">
           {votes}
         </a>
       </div>

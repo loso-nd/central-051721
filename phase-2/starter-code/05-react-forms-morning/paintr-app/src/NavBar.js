@@ -1,7 +1,7 @@
 function NavBar(props) {
   return (
     <div className={`ui inverted ${props.color} menu`}>
-      <a className="item">
+      <a className="item" href="./">
         <h2 className="ui header">
           <i className={`${props.icon} icon`} />
           <div className="content">{props.title}</div>
@@ -15,9 +15,9 @@ function NavBar(props) {
       {/* <button onClick={props.changeColor("purple")}>Change Color</button> */}
       
       {/* RIGHT WAY - Passing in an ENTIRE function (callback) */}
-      <button onClick={() => props.changeColor("purple")}>
+      {/* <button onClick={() => props.changeColor("purple")}>
         Change Color
-      </button>
+      </button> */}
     </div>
   );
 };

@@ -20,7 +20,17 @@ function App() {
   const [formView, formViewSetter] = useState(false);
 
   // Create function to change Parent's "color" state (changeColor)
-  // ...
+  // This is invoking our colorSetter method which is changing our state of our color
+    function changeColor(newColor){
+      colorSetter(newColor);
+    }
+
+  {/* Breakout Activity #1: Render PaintingForm or PaintingsList Components based upon toggleForm */}
+    function toggleForm(){
+      console.log(formView)
+      console.log("Where are you at playa")
+      formViewSetter(!formView)
+    }
 
   // Breakout Activity #1: Create Function to Toggle Between PaintingForm / PaintingsList (toggleForm)
   // ...
@@ -34,17 +44,17 @@ function App() {
         description="an app we made"
 
         // Pass changeColor() as prop to NavBar
-        // ...
+        //changeColor={colorSetter} //this works as well if you wanted to directly change the color one time
+        //This method allows us to extrapolate our code into a function execute the code above and do more
+        changeColor={changeColor}
       />
 
-      {/* Add toggleForm click behavior */}
-      <button>Show/Hide New Painting Form</button>
-      <hr />
 
-      {/* Breakout Activity #1: Render PaintingForm or PaintingsList Components based upon toggleForm */}
-      {/* ... */}
+      {/* Add toggleForm click behavior */}
+      <button onClick={() => toggleForm()}>Show/Hide New Painting Form</button>
+      <hr />
     
-      <PaintingsList paintings={paintings} />
+      {formView ? <PaintingForm /> :<PaintingsList paintings={paintings}/> }
     </div>
   );
 }

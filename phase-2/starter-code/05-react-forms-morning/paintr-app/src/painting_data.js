@@ -1,4 +1,4 @@
-export default [
+export default  [
     {
       id: '59bd5a519c18db5297a32479',
       collecting_institution: '',
