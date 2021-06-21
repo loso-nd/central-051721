@@ -14,10 +14,11 @@ function App() {
   function handleFetchClick() {
     console.log("Fetching data...");
     fetch("https://dog.ceo/api/breeds/image/random/8")
-      .then(r => r.json())
+      .then(res => res.json())
       .then(data => {
         console.log("Data fetched!", data);
         // data is an object with a key of message, which has an array of images
+        // data.message => Array
         setPics(data.message);
       });
   }
